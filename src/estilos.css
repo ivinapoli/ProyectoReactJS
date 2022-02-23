@@ -1,0 +1,27 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(169, 208, 252);
+}
+
+.nav {
+    background-color: rgb(111, 209, 255);
+}
+
+.navA {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.tituloNav {
+    display: inline-block;
+    padding: 0.5rem;
+    margin-right: 20rem;
+}
