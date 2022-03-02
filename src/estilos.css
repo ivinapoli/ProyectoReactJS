@@ -5,23 +5,49 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: rgb(169, 208, 252);
+#root {
+    height: 100vh;
 }
 
-.nav {
-    background-color: rgb(111, 209, 255);
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+#headerNav {
+    background-color: rgb(101, 205, 253);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navA {
+    color: black;
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
-    padding: 1rem;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
 }
 
-.tituloNav {
-    display: inline-block;
+main {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: rgb(101, 205, 253);
     padding: 0.5rem;
-    margin-right: 20rem;
+    text-align: center;
+    color: black;
+}
+
+.tituloHeader {
+    color: black;
+}
+
+.carrito {
+    height: 2rem;
+    margin-right: 1rem;
 }
