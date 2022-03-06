@@ -1,7 +1,11 @@
 
-const ItemListContainer = (props) => {
+import ItemCount from "../components/ItemCount";
+
+const ItemListContainer = () => {
+    const miOnAdd = () => {}
+
     return (
-        <h2>{props.greeting}</h2>
+        <ItemCount onAdd={miOnAdd} stock={5} initial={1}></ItemCount>
     );
 };
 

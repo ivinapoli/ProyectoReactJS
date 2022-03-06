@@ -8,7 +8,7 @@ function App () {
     return (
         <>
             <Header/>
-            <ItemListContainer greeting="¡Bienvenido a mi e-commerce!"></ItemListContainer>
+            <ItemListContainer/>
             <Main/>
             <Footer/>
         </>
