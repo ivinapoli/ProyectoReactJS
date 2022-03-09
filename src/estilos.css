@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Passion One', sans-serif;
 }
 
 #root {
@@ -23,25 +23,31 @@
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
 }
 
 .navA {
     color: black;
     text-transform: uppercase;
-    font-weight: bold;
     text-decoration: none;
     margin-left: 1rem;
     margin-right: 0.5rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
 }
 
-.tituloHeader {
-    color: black;
+.navA:hover {
+    color: white;
 }
 
 .carrito {
     height: 2rem;
     margin-right: 1rem;
+}
+
+.logoHeader {
+    width: 200px;
+    height: 54px;
 }
 
 /* ------------------------- */
@@ -53,6 +59,8 @@ section {
 main {
     flex-grow: 1;
     padding: 0.5rem;
+    background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: screen;
 }
 
 footer {
@@ -62,7 +70,7 @@ footer {
     color: black;
 }
 
-/* ------------CONTADOR------------- */
+/* ------------ CONTADOR ------------- */
 
 .botonMas{
     font-size: 1.3rem;
@@ -85,3 +93,48 @@ footer {
     margin-left: 1rem;
 }
 
+/* ------------ CARDS ------------- */
+
+.detallesBoton {
+    text-transform: uppercase;
+    font-size: 1rem;
+    border: 0rem;
+    padding: 0.3rem 0.7rem 0.2rem 0.7rem;
+    letter-spacing: 0.06rem;
+}
+
+.detallesBoton:hover {
+    color: white;
+}
+
+.cardTitulo {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.cardPrecio {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.flexDad{
+    height: 40rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.flexSon{
+    width: 20rem;
+    height: 27rem;
+    margin: 0.7rem;
+    align-items: center;
+}
+
+.backGround {
+    background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: screen;
+}

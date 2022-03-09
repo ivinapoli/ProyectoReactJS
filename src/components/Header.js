@@ -1,9 +1,9 @@
 
-import NavBar from "../components/NavBar";
+import NavBar from "./NavBar";
 
 const Header = () => {
     return <header id="headerNav"> 
-        <h1 className="tituloHeader">e-commerce</h1>
+        <img src="/logo.png" alt="" className="logoHeader"/>
         <NavBar/>
     </header>
 }
