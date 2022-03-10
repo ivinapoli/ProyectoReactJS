@@ -30,7 +30,7 @@ let productosIniciales = [
 
 
 const ItemListContainer = (props) => {
-    const [productos, setProductos] = useState([{}, {}, {}]);
+    const [productos, setProductos] = useState([]);
 
     useEffect(() => {
         const promise = new Promise((success, error) => {
@@ -38,7 +38,7 @@ const ItemListContainer = (props) => {
         }).then((data) => {
             setProductos(data);
         });
-    });
+    },[]);
 
     return (
         <section className="backGround">

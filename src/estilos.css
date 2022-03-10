@@ -93,7 +93,7 @@ footer {
     margin-left: 1rem;
 }
 
-/* ------------ CARDS ------------- */
+/* ------------ CARDS PRODUCTOS ------------- */
 
 .detallesBoton {
     text-transform: uppercase;
@@ -137,4 +137,51 @@ footer {
 .backGround {
     background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
     background-blend-mode: screen;
+}
+
+/* ------------ CARD DETAIL ------------- */
+
+.flexDetailDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.flexDetailDad {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 3rem;
+    padding: 0.5rem 0.8rem;
+}
+
+.flexDetailSon {
+    margin: 0.5rem;
+    height: 26rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.detailTitle {
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 0.9rem 0rem 1.5rem;
+}
+
+.detailSubTitle {
+    font-size: 1.6rem;
+    margin: 0.7rem 0.2rem;
+}
+
+.detailStock {
+    font-size: 1.5rem;
+    margin: 0.7rem 0.2rem;
+}
+
+.detailPrice {
+    font-size: 1.8rem;
+    margin: 0.7rem 0.2rem;
 }
