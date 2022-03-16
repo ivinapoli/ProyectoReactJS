@@ -1,9 +1,10 @@
 
-import {Button, Card} from "react-bootstrap"
+import {Button, Card} from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Item = (props) => {
     const producto = props.producto;
-    const { id, nombre, precio, stock, img } = producto;
+    const { id, nombre, precio, stock, descripcion, img } = producto;
 
     return (
         <Card style={{ width: '18rem' }} className='flexSon'>
@@ -11,7 +12,9 @@ const Item = (props) => {
             <Card.Body>
                 <Card.Title className='cardTitulo'>{nombre}</Card.Title>
                 <Card.Text className='cardPrecio'>${precio}</Card.Text>
-                <Button variant="info" className='detallesBoton'>Ver Detalles</Button>
+                <Button variant="info" className='detallesBoton'>
+                    <Link to={`/producto/${producto.id}`} className='linkBoton'>Ver Detalle</Link>
+                </Button>
             </Card.Body>
         </Card>
     )

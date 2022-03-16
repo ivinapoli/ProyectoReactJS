@@ -1,7 +1,7 @@
 
 import Item from "./Item";
 
-export const ItemList = (props) => {
+const ItemList = (props) => {
     const { productos } = props;
 
     return (
@@ -13,5 +13,5 @@ export const ItemList = (props) => {
     );
 };
 
-
+export default ItemList
 
