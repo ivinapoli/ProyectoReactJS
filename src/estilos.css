@@ -112,6 +112,10 @@ footer {
     color: black;
 }
 
+.linkBoton:hover {
+    color: white;
+}
+
 .cardTitulo {
     text-align: center;
     font-size: 1.5rem;
@@ -162,13 +166,13 @@ footer {
     justify-content: center;
     align-items: center;
     align-content: center;
-    margin: 3rem;
+    margin: 10rem 3rem;
     padding: 0.5rem 0.8rem;
 }
 
 .flexDetailSon {
     margin: 0.5rem;
-    height: 26rem;
+    height: 28rem;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -213,7 +217,7 @@ footer {
 
 @media (min-width: 1991px) {
     .flexDad{
-        height: 80rem;
+        height: 100rem;
     }
 }
 

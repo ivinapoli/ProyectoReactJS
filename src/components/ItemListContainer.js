@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 
 export let productosIniciales = [
     {
-        id: 1,
+        id: "1",
         nombre: "Smirnoff",
         precio: 950,
         stock: 12,
@@ -16,7 +16,7 @@ export let productosIniciales = [
         img: "/smirnoff.jpg"
     },
     {
-        id: 2,
+        id: "2",
         nombre: "Baron B",
         precio: 3200,
         stock: 8,
@@ -25,7 +25,7 @@ export let productosIniciales = [
         img: "/baronB.jpg"
     },
     {
-        id: 3,
+        id: "3",
         nombre: "Red Label",
         precio: 2500,
         stock: 7,
@@ -34,7 +34,7 @@ export let productosIniciales = [
         img: "/redLabel.jpg"
     },
     {
-        id: 4,
+        id: "4",
         nombre: "Casa Boher",
         precio: 1850,
         stock: 10,
@@ -43,7 +43,7 @@ export let productosIniciales = [
         img: "/casaBoher.jpg"
     },
     {
-        id: 5,
+        id: "5",
         nombre: "Chandon",
         precio: 900,
         stock: 14,
@@ -52,7 +52,7 @@ export let productosIniciales = [
         img: "/chandon.jpg"
     },
     {
-        id: 6,
+        id: "6",
         nombre: "Beefeater",
         precio: 4000,
         stock: 9,
@@ -61,7 +61,7 @@ export let productosIniciales = [
         img: "/beefeater.jpg"
     },
     {
-        id: 7,
+        id: "7",
         nombre: "Gancia",
         precio: 650,
         stock: 20,
@@ -70,7 +70,7 @@ export let productosIniciales = [
         img: "/gancia.jpg"
     },
     {
-        id: 8,
+        id: "8",
         nombre: "Chivas Regal",
         precio: 4800,
         stock: 11,
@@ -79,7 +79,7 @@ export let productosIniciales = [
         img: "/chivasRegal.jpg"
     },
     {
-        id: 9,
+        id: "9",
         nombre: "Old Smuggler",
         precio: 1300,
         stock: 16,
@@ -88,7 +88,7 @@ export let productosIniciales = [
         img: "/oldSmuggler.jpg"
     },
     {
-        id: 10,
+        id: "10",
         nombre: "Nieto Senetiner",
         precio: 1000,
         stock: 25,
@@ -97,7 +97,7 @@ export let productosIniciales = [
         img: "/nietoSenetiner.jpg"
     },
     {
-        id: 11,
+        id: "11",
         nombre: "Jack Daniels",
         precio: 9500,
         stock: 5,
@@ -106,7 +106,7 @@ export let productosIniciales = [
         img: "/jackDaniels.jpg"
     },
     {
-        id: 12,
+        id: "12",
         nombre: "Fernet Branca",
         precio: 1280,
         stock: 12,

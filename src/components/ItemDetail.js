@@ -3,7 +3,7 @@ import {Card} from "react-bootstrap"
 
 export const ItemDetail = (props) => {
     const producto = props.producto;
-    const { id, nombre, precio, stock, descripcion, img } = producto;
+    const { id, nombre, precio, stock, categoria, descripcion, img } = producto;
 
     return (
         <div className="flexDetailDiv">

@@ -1,24 +1,26 @@
 
 import { useState, useEffect } from "react";
 import { ItemDetail } from "./ItemDetail";
-import productosIniciales from "./ItemListContainer";
+import { productosIniciales } from "./ItemListContainer";
 import { useParams } from "react-router-dom";
 
 // import ItemCount from "../components/ItemCount";
 
-const ItemDetailContainer = (props) => {
+const ItemDetailContainer = () => {
     const [producto, setProducto] = useState({});
-    const { id } = useParams()
+    const { id } = useParams();
 
     useEffect(() => {
-        const promesa = new Promise((success, error) => {
-            setTimeout(() => success(productosIniciales), 2000);
-        }).then((success) => {
-            let result = productosIniciales.find(producto => {
-                return producto.id === id;
+        const ProductoPromise = new Promise((res, rej) => {
+            setTimeout(() => {
+                res(productosIniciales.find((producto) => (producto.id) === (id)) );
+            }, 2000);
+        });
+
+        ProductoPromise
+            .then((data) => {
+                setProducto(data);
             })
-            setProducto(producto)
-        })
     }, [id]);
 
     return (
