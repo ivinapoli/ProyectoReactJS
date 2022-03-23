@@ -1,10 +1,8 @@
 
 import { useState, useEffect } from "react";
 import { ItemDetail } from "./ItemDetail";
-import { productosIniciales } from "./ItemListContainer";
+import { productosIniciales } from "./ProductosIniciales";
 import { useParams } from "react-router-dom";
-
-// import ItemCount from "../components/ItemCount";
 
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState({});

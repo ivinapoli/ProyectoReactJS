@@ -1,20 +1,30 @@
 
 import ItemCount from "./ItemCount"
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import {Button, Card} from "react-bootstrap";
+import { cartContext } from "./CartContext";
 
 export const ItemDetail = (props) => {
+
     const producto = props.producto;
     const { id, nombre, precio, stock, categoria, descripcion, img } = producto;
-    const [contadorFuera, setContadorFuera] = useState(false);
+
+    const [contadorFuera, setContadorFuera] = useState(true);
     const [unidadesCompradas, setUnidadesCompradas] = useState(0);
+
+    const useCartContext = useContext(cartContext);
+    const { agregarAlCarrito } = useCartContext;
 
     const onAdd = (contadorActivo) => {
         if (contadorActivo != undefined) {
-            setContadorFuera(true);
             setUnidadesCompradas(contadorActivo);
+            setContadorFuera(false);
         }
+    }
+
+    const handlePurchase = () => {
+        agregarAlCarrito(producto, unidadesCompradas);
     }
 
     return (
@@ -28,9 +38,8 @@ export const ItemDetail = (props) => {
                         <Card.Title className="detailTitle">{nombre}</Card.Title>
                         <Card.Subtitle className="detailSubTitle">{descripcion}</Card.Subtitle>
                         <Card.Text className="detailPrice"> Precio: ${precio}</Card.Text>
-                        {contadorFuera ?
-                        <Link to="/carrito"><Button variant="info" className="botonIrAlCarrito">Ir al Carrito</Button></Link> :
-                        <ItemCount initial={1} stock={stock} onAdd={onAdd}/>}
+                        <ItemCount initial={1} stock={stock} onAdd={onAdd}/>
+                        {contadorFuera ? null : <Link to="/carrito/"><Button onClick={handlePurchase} variant="info" className="botonIrAlCarrito">Agregar al carrito</Button></Link>}
                     </Card.Body>
                 </Card>
             </Card>
