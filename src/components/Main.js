@@ -3,6 +3,9 @@ import { Route, Routes } from "react-router-dom";
 import ItemListContainer from "./ItemListContainer";
 import ItemDetailContainer from "./ItemDetailContainer";
 import Carrito from "./Carrito";
+import {ToastContainer,toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Main = () => {
     return (
@@ -13,6 +16,7 @@ const Main = () => {
                 <Route path="/carrito/" element={<Carrito/>}/>
                 <Route path="/producto/:id" element={<ItemDetailContainer/>}/>
             </Routes>
+            <ToastContainer />
         </main>
     );
 }
