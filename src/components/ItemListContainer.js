@@ -1,25 +1,40 @@
 
 import ItemList from "./ItemList";
+import { db } from "./Firebase";
+import { toast } from "react-toastify";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { productosIniciales } from "./ProductosIniciales";
+import { query, where, getDocs, collection } from "firebase/firestore";
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
     const { categoria } = useParams();
 
     useEffect(() => {
-        const promise = new Promise((res, rej) => {
-            setTimeout(() => res(productosIniciales), 2000);
-        }).then((res) => {
-            if (categoria != undefined) {
-                const productosFiltrados = productosIniciales.filter(producto => producto.categoria === categoria)
-                setProductos(productosFiltrados)
-            } else {
-                setProductos(productosIniciales);
-            }
-        });
-    },[categoria]);
+        if (categoria !== undefined) {
+            const documentosFiltrados = getDocs(query(collection(db, "productos"), where("categoria", "==", categoria)));
+            documentosFiltrados.then((snapshot) => {
+                setProductos(snapshot.docs.map(doc => ({
+                    ...doc.data(),
+                    id: doc.id
+                })));
+            })
+                .catch((rej) => {
+                    toast.error("Error. Los productos no fueron cargados correctamente.");
+                })
+        } else {
+            const documentos = getDocs(collection(db, "productos"));
+            documentos.then((snapshot) => {
+                setProductos(snapshot.docs.map(doc => ({
+                    ...doc.data(),
+                    id: doc.id
+                })));
+            })
+                .catch((rej) => {
+                    toast.error("Error. Los productos no fueron cargados correctamente.");
+                })
+        }
+    }, [categoria]);
 
     return (
         <section className="backGround">

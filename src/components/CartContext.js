@@ -12,21 +12,30 @@ const CartProvider = ({ children }) => {
     const [productosTotal, setProductosTotal] = useState(0);
 
     const confirmarCompra = () => {
-        toast.success("Su compra se ha procesado con éxito.");
+        toast.success("Su compra se ha realizado con éxito!");
+        setCarrito([]);
+        setPrecioTotal(0);
+        setProductosTotal(0);
     }
 
     const agregarAlCarrito = (producto, count) => {
-        let carritoProducto = { producto, count }
-        let tempCarrito = []
+        let carritoProducto = { producto, count };
+        let tempCarrito = [];
 
         if (isInCarrito(producto)) {
-            carritoProducto = carrito.find(item => item.producto === producto)
-            carritoProducto.count = carritoProducto.count + count
-            tempCarrito = [...carrito]
+            carritoProducto = carrito.find(item => item.producto.nombre === producto.nombre)
+            if (carritoProducto.count + count <= producto.stock) {
+                carritoProducto.count += count;
+                toast.success("Has agregado " + count + " producto/s al carrito.");
+            } else {
+                toast.error("No puedes agregar más de " + producto.stock + " unidades de " + producto.nombre + " al carrito.");
+                return;
+            }
         } else {
+            toast.success("Has agregado " + count + " producto/s al carrito.")
             tempCarrito = [carritoProducto, ...carrito]
+            setCarrito(tempCarrito)
         }
-        setCarrito(tempCarrito)
 
         let tempPrecioTotal = 0;
         let tempProductosTotal = 0;
@@ -44,7 +53,7 @@ const CartProvider = ({ children }) => {
         setCarrito([]);
         setPrecioTotal(0);
         setProductosTotal(0);
-        toast.info("Productos del carrito eliminados.");
+        toast.info("Productos eliminados del carrito.");
     }
 
     const borrarDelCarrito = (producto) => {
@@ -71,7 +80,7 @@ const CartProvider = ({ children }) => {
     }
 
     const isInCarrito = (producto) => {
-        return carrito && carrito.some(item => item.producto === producto);
+        return carrito && carrito.some(item => item.producto.nombre === producto.nombre);
     }
 
     return (

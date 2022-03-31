@@ -1,29 +1,30 @@
 
-import { useState, useEffect } from "react";
+import { db } from "./Firebase";
+import { toast } from "react-toastify";
 import { ItemDetail } from "./ItemDetail";
-import { productosIniciales } from "./ProductosIniciales";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { query, where, getDocs, collection } from "firebase/firestore";
+
 
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState({});
     const { id } = useParams();
 
     useEffect(() => {
-        const ProductoPromise = new Promise((res, rej) => {
-            setTimeout(() => {
-                res(productosIniciales.find((producto) => (producto.id) === (id)) );
-            }, 2000);
-        });
+        const documentosFiltrados = getDocs(query(collection(db, "productos"), where("id", "==", id)));
 
-        ProductoPromise
-            .then((data) => {
-                setProducto(data);
+        documentosFiltrados.then((snapshot) => {
+            setProducto(snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }))[0]);
+        })
+            .catch((rej) => {
+                toast.error("Error. Los productos no fueron cargados correctamente.");
             })
     }, [id]);
 
     return (
         <section className="backGround">
-            <ItemDetail producto={producto}/>
+            <ItemDetail key={producto.id} producto={producto}/>
         </section>
     );
 };
