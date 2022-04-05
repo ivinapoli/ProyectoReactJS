@@ -176,20 +176,20 @@ footer {
 }
 
 .flexDad{
-    height: 115rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 3rem;
+    margin-top: 8rem;
+    margin-bottom: 6rem;
 }
 
 .flexSon{
     padding-top: 1rem;
     width: 20rem;
     height: 29rem;
-    margin: 0.7rem;
+    margin: 1.5rem;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
@@ -318,10 +318,99 @@ footer {
     text-align: center;
 }
 
+/*.---------- CART CHECKOUT ----------.*/
+
+.checkoutTitulo {
+    display: inline-block;
+    font-size: 2.4rem;
+    margin: 2rem 0.5rem;
+}
+
+.carritoVacioCheckout {
+    font-size: 1.7rem;
+    padding: 0.2rem 0.6rem 0.1rem 0.6rem;
+}
+
+.carritoVacioCheckout:hover {
+    color: white;
+}
+
+.checkoutDiv {
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkoutDiv2 {
+    height: 50rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    background-color: rgb(248, 248, 248);
+    margin: 2rem;
+    padding: 1.4rem 2.1rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 0.8rem;
+}
+
+.productosFinal {
+    font-size: 1.3rem;
+    margin: 0rem;
+}
+
+.precioFinal {
+    font-size: 1.65rem;
+    margin: 0.1rem 0rem 0.8rem 0rem;
+}
+
+.botonesCheckout {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    border: 0rem;
+    margin: 0.2rem 0.3rem;
+    letter-spacing: 0.08rem;
+}
+
+.checkoutTitle {
+    font-size: 2rem;
+    margin: 0.8rem;
+}
+
+.datosCheckout {
+    font-size: 1.2rem;
+    margin: 0.8rem 0.2rem 0.2rem 0.2rem;
+}
+
+.emailCheckout {
+    font-size: 1.2rem;
+    margin: 0rem 0.2rem 0.2rem 0.2rem;
+}
+
+.mutedText {
+    font-size: 1rem;
+    margin-left: 0.2rem;
+}
+
+.inputsCheckout {
+    font-size: 1.1rem;
+}
+
+
+
 /*.---------- MEDIA QUERIES ----------.*/
 /*.---------- CARDS/PRODUCTOS ----------.*/
 
-@media (min-width: 2280px) {
+/* @media (min-width: 2280px) {
     .flexDad{
         padding: 3rem 12rem;
     }
@@ -373,6 +462,6 @@ footer {
         padding-bottom: 4rem;
     }
 }
-
+ */
 
 

@@ -4,7 +4,7 @@ import CartCheckout from "./CartCheckout";
 import ItemListContainer from "./ItemListContainer";
 import ItemDetailContainer from "./ItemDetailContainer";
 import Carrito from "./Carrito";
-import {ToastContainer,toast} from 'react-toastify'
+import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
 

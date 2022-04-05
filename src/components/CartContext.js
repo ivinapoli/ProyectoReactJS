@@ -11,8 +11,8 @@ const CartProvider = ({ children }) => {
     const [precioTotal, setPrecioTotal] = useState(0);
     const [productosTotal, setProductosTotal] = useState(0);
 
-    const confirmarCompra = () => {
-        toast.success("Su compra se ha realizado con éxito!");
+    const confirmarCompra = (ventaId) => {
+        toast.success("Compra realizada con éxito! El ID de su orden es: " + ventaId + ".", { autoClose: false });
         setCarrito([]);
         setPrecioTotal(0);
         setProductosTotal(0);

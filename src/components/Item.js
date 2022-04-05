@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Item = (props) => {
     const producto = props.producto;
-    const { id, nombre, precio, stock, descripcion, img } = producto;
+    const { nombre, precio, img } = producto;
 
     return (
         <Card style={{ width: '18rem' }} className='flexSon'>
