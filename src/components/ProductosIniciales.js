@@ -23,7 +23,7 @@ export let productosIniciales = [
         precio: 2500,
         stock: 7,
         categoria: "whiskies",
-        descripcion: "Whisky Johnnie Walker Red Label de 1L. 40% de graduación alcohólica.",
+        descripcion: "Whisky Johnnie Walker Red Label. 40% de graduación alcohólica.",
         img: "/redLabel.jpg"
     },
     {
@@ -59,7 +59,7 @@ export let productosIniciales = [
         precio: 650,
         stock: 20,
         categoria: "aperitivos",
-        descripcion: "Gancia americano original de 950ml.",
+        descripcion: "Gancia americano original de 950ml. Nacido en 1850 en Italia.",
         img: "/gancia.jpg"
     },
     {
@@ -104,7 +104,7 @@ export let productosIniciales = [
         precio: 1280,
         stock: 12,
         categoria: "aperitivos",
-        descripcion: "Fernet Branca original de 750ml.",
+        descripcion: "Fernet Branca original de 750ml. Producto de origen italiano.",
         img: "/fernet.jpg"
     }
-]
+];

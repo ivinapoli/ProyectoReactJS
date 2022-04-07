@@ -1,70 +1,31 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# WhatToDrink - Ecommerce (ReactJS).
 
-## Available Scripts
+## Información general del proyecto:
+- Proyecto final del curso de ReactJS (Coderhouse). 
+- Ecommerce desarrollado a partir de ReactJS utilizando React Router, React Hooks, React Toastify para insertar notificaciones, React Bootstrap como framework para agregarle estilos prediseñados al sitio además de mi propio css vanilla y la implementación de Firebase como base de datos.
 
-In the project directory, you can run:
+## Librerias y frameworks utilizados:
+- firebase: "v9.6.10".
+- react-toastify: "v8.2.0".
+- react-bootstrap: "v2.1.2".
+- react-router-dom: "v6.2.2".
 
-### `npm start`
+## Cómo usar y funcionalidades:
+1- En el inicio, podrá navegar por el sitio y observar todos los productos a la venta disponibles.
+2- En caso de desearlo, podrá filtrar los productos por categorías a través de la barra de navegación en el encabezado.
+3- Una vez que haya decidido que producto es de su interés, haga click en "Ver Detalle".
+4- A continuación tendrá toda la información específica del producto que ha seleccionado y podrá agregar unidades del mismo.
+5- Una vez que haya elegido la cantidad del producto que desea adquirir, proceda a agregarlo al carrito.
+6- Al agregar el producto al carrito, puede observar el precio y el total de productos que ha seleccionado hasta el momento.
+7- Puede continuar agregando más productos dirigiéndose nuevamente al inicio o hacia alguna categoría en específico.
+8- Cuando haya terminado de agregar al carrito todos los productos que quería, debe hacer click en "Realizar Compra".
+9- Será redireccionado a un formulario en donde obtendrá también un breve resumen de su compra (cantidad de productos/precio).
+10- Listo! Complete el formulario para finalizar la compra y adquirir sus productos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Detalles de uso:
+- No podrá agregar al carrito una cantidad mayor al stock declarado de un producto.
+- Luego de completar el formulario, obtendrá un ID como identificador de número de compra.
+- Si el carrito deja de estar vacio, aparecerá el icono con un número indicando la cantidad de productos seleccionados hasta el momento en la barra de navegación sobre el encabezado.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ivan Nahuel Napoli.

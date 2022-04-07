@@ -1,9 +1,7 @@
-
 import { cartContext } from "./CartContext";
 import { useContext } from 'react';
 
 const CartWidget = () => {
-
     const useCartContext = useContext(cartContext);
     const { productosTotal } = useCartContext;
 

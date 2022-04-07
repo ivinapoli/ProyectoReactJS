@@ -1,4 +1,3 @@
-
 import {Button} from "react-bootstrap"
 import {useState} from "react"
 
@@ -23,10 +22,10 @@ const ItemCount = (props) => {
 
     return (
         <div>
-            <h5 className="countStock">Stock: {props.stock}</h5>
-            <h4 className="countCantidad">Cantidad: {contador}</h4>
+            <h5 className="countStock">Stock disponible: {props.stock}</h5>
+            <h4 className="countCantidad">Cantidad: {contador} unidad/es.</h4>
             <Button onClick={sumar} disabled={contador === props.stock} variant="info" className="botonMas">+</Button>
-            <Button onClick={restar} disabled={contador === 0} variant="info" className="botonMenos">-</Button>
+            <Button onClick={restar} disabled={contador === 0} variant="danger" className="botonMenos">-</Button>
             <Button onClick={confirmar} disabled={contador === 0} variant="info" className="botonConfirmar">confirmar</Button>
         </div>
     );

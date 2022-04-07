@@ -1,11 +1,9 @@
-
 import { useContext } from 'react';
 import {Button, Card} from "react-bootstrap";
 import { cartContext } from "./CartContext";
 import { Link } from "react-router-dom";
 
 const Carrito = () => {
-
     const useCartContext = useContext(cartContext);
     const { carrito, borrarDelCarrito, limpiarCarrito, precioTotal, productosTotal } = useCartContext;
 
@@ -13,7 +11,7 @@ const Carrito = () => {
         <>
         {carrito.length === 0 ? <div className="text-center checkoutDiv">
             <h1 className="checkoutTitulo">Su carrito está vacio, comienze a añadir productos.</h1>
-            <Link to="/"><Button variant="info" className='carritoVacioCheckout'>Volver al inicio</Button></Link> </div> :
+            <Link to="/"><Button className='carritoVacioCheckout'>Volver al inicio</Button></Link> </div> :
         <div className="divCarrito">
             <>{
                 carrito.map(item => (
@@ -34,13 +32,13 @@ const Carrito = () => {
                 ))
             }
             <div>
-                <Card>
+                <Card className='cardTotalCarrito'>
                     <Card.Body>
                         <h3 className='totalCarrito'>Total productos: {productosTotal}</h3>
                         <h3 className='totalCarrito'>Total carrito: ${precioTotal}</h3>
                         <Button onClick={limpiarCarrito} variant="danger" className='botonesCart'>Vaciar Carrito</Button>
-                        <Button variant="info" className='botonesCart'>
-                            <Link to={`/checkout`} className='linkBoton'>Realizar Compra</Link>
+                        <Button variant="primary" className='botonesCart'>
+                            <Link to={`/checkout`} className='linkBotonCarrito'>Realizar Compra</Link>
                         </Button>
                     </Card.Body>
                 </Card>
@@ -50,6 +48,6 @@ const Carrito = () => {
         }
         </>
     )
-}
+};
 
 export default Carrito

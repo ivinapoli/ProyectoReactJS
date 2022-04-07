@@ -1,4 +1,3 @@
-
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
 import { cartContext } from "./CartContext";

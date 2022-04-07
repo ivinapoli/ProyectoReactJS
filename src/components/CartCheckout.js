@@ -1,4 +1,3 @@
-
 import { db } from "./Firebase";
 import { cartContext } from "./CartContext";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
@@ -49,7 +48,7 @@ const CartCheckout = () => {
         <>
         {carrito.length === 0 ? <div className="text-center checkoutDiv">
             <h1 className="checkoutTitulo">Su carrito está vacio, comienze a añadir productos.</h1>
-            <Link to="/"><Button variant="info" className='carritoVacioCheckout'>Volver al inicio</Button></Link> </div> :
+            <Link to="/"><Button className='carritoVacioCheckout'>Volver al inicio</Button></Link> </div> :
         <>
         <div className="checkoutDiv2">
             <Form className="form">
@@ -82,6 +81,6 @@ const CartCheckout = () => {
         }
         </>
     )
-}
+};
 
 export default CartCheckout
