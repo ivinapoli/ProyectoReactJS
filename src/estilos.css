@@ -377,7 +377,8 @@ footer {
 }
 
 .divCarrito {
-    margin-top: 5rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -455,7 +456,7 @@ footer {
 
 .form {
     background-color: rgb(248, 248, 248);
-    margin: 2rem;
+    margin: 1rem 2rem 2rem;
     padding: 1.4rem 2.1rem;
     align-items: center;
     justify-content: center;

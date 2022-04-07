@@ -1,6 +1,8 @@
 
 # WhatToDrink - E-commerce (ReactJS).
 
+- Ingrese al sitio: 
+
 ## Información General del Proyecto:
 - Proyecto final del curso de ReactJS (Coderhouse). 
 - Ecommerce desarrollado a partir de ReactJS utilizando React Router, React Hooks, React Toastify para insertar notificaciones, React Bootstrap como framework para agregarle estilos prediseñados al sitio además de mi propio css vanilla y la implementación de Firebase como base de datos.
@@ -14,7 +16,7 @@
 6.  Al agregar el producto al carrito, puede observar el precio y el total de productos que ha seleccionado hasta el momento.
 7.  Puede continuar agregando más productos dirigiéndose nuevamente al inicio o hacia alguna categoría en específico.
 8.  Cuando haya terminado de agregar al carrito todos los productos que quería, debe hacer click en "Realizar Compra".
-9.  Será redireccionado a un formulario en donde obtendrá también un breve resumen de su compra (cantidad de productos/precio).
+9.  Será redireccionado a un formulario en donde obtendrá también un breve resumen de su compra (cantidad de productos - precio total).
 10.  Listo! Complete el formulario para finalizar la compra y adquirir sus productos.
 
 ### Detalles de uso:
@@ -28,4 +30,5 @@
 - react-bootstrap: "v2.1.2".
 - react-router-dom: "v6.2.2".
 
-                                                                                Ivan Nahuel Napoli.
+
+Ivan Nahuel Napoli.
