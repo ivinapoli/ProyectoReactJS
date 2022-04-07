@@ -1,7 +1,8 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/90b8d017-cf13-4464-a356-98a107cf7e1e/deploy-status)](https://app.netlify.com/sites/spiffy-truffle-1622c1/deploys)
 
 # WhatToDrink - E-commerce (ReactJS).
 
-- Ingrese al sitio: 
+- Ingrese al sitio: https://spiffy-truffle-1622c1.netlify.app
 
 ## Información General del Proyecto:
 - Proyecto final del curso de ReactJS (Coderhouse). 
@@ -31,4 +32,4 @@
 - react-router-dom: "v6.2.2".
 
 
-Ivan Nahuel Napoli.
+* Ivan Nahuel Napoli.
